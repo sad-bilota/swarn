@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Audio Elements -->
+    <audio id="music1" loop>
+      <source src="music1.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="music2" loop>
+      <source src="music2.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Signup Page -->
+    <div id="signup-container" class="page-container">
+      <div class="content-wrapper">
+        <div class="signup-card">
+          <h1>Sign up to my heart 💖</h1>
+          <input 
+            type="text" 
+            id="name-input" 
+            placeholder="Enter your lovely name..."
+            autocomplete="off"
+          />
+          <p id="error-message"></p>
+          <button id="signup-btn">Enter my heart 💕</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Envelope Screen -->
+    <div id="envelope-container" class="page-container">
+      <div class="content-wrapper">
+        <div class="envelope-wrapper">
+          <img src="envelope.png" alt="Envelope" id="envelope" />
+          <p class="envelope-text">♡ Letter For You ♡</p>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Page 1: First Proposal -->
+    <div id="page1-container" class="page-container">
+      <div class="content-wrapper">
+        <div class="letter-content">
+          <h1 class="proposal-title">Will you be my Valentine, <span id="user-name-1" class="name-highlight"></span>?</h1>
+
+          <div class="cat-wrapper">
+            <img src="pic1.gif" class="cat-image" alt="Happy Cat" />
+          </div>
+
+          <div class="buttons-wrapper">
+            <img src="yes.png" class="btn yes-btn" id="page1-yes" alt="Yes" />
+            <img src="no.png" class="btn no-btn-static" id="page1-no" alt="No" />
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Page 2: Are you sure? -->
+    <div id="page2-container" class="page-container">
+      <div class="content-wrapper">
+        <div class="letter-content">
+          <h1 class="proposal-title">Are you sure?</h1>
+
+          <div class="cat-wrapper">
+            <img src="pic2.gif" class="cat-image" alt="Crying Cat" />
+          </div>
+
+          <div class="buttons-wrapper">
+            <img src="yes.png" class="btn yes-btn" id="page2-yes" alt="Yes" />
+            <img src="no.png" class="btn no-btn-static" id="page2-no" alt="No" />
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Page 3: Last time -->
+    <div id="page3-container" class="page-container">
+      <div class="content-wrapper">
+        <div class="letter-content">
+          <h1 class="proposal-title">Last time pooch rahi hoon, <span id="user-name-3" class="name-highlight"></span><br/>Will you be my Valentine?</h1>
+
+          <div class="cat-wrapper">
+            <img src="pic3.gif" class="cat-image" alt="Cat" />
+          </div>
+
+          <div class="buttons-wrapper" id="page3-buttons">
+            <img src="yes.png" class="btn yes-btn" id="page3-yes" alt="Yes" />
+            
+            <div class="no-wrapper" id="no-wrapper-page3">
+              <img src="no.png" class="btn no-btn" id="page3-no" alt="No" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Final Success Screen -->
+    <div id="letter-container" class="page-container">
+      <div class="content-wrapper">
+        <div class="letter-content success-content">
+          <h1 class="success-title">Yippeeee!</h1>
+
+          <div class="cat-wrapper">
+            <img src="cat_dance.gif" class="cat-image cat-dance" alt="Dancing Cat" />
+          </div>
+
+          <p class="final-text">
+            <strong>Valentine Date:</strong> Meow Restaurant at 7pm. Dress fancy! 💕
+          </p>
+
+          <button class="continue-btn" id="continueToGifts">Continue 💝</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖p>
+      </footer>
+    </div>
+
+    <!-- Gifts Selection Page -->
+    <div id="gifts-page-container" class="page-container">
+      <div class="content-wrapper">
+        <div class="letter-content success-content">
+          <h1 class="success-title">Yay, you said yes!</h1>
+
+          <p class="sub-text-gifts">I made all these for you hehe</p>
+
+          <button class="click-me-btn" id="clickMeBtn">Click Me 🎁</button>
+
+          <div class="gifts-container" id="giftsContainer">
+            <div class="gift-box" id="giftBox1">
+              <img src="giftbox.png" alt="Gift 1" class="gift-icon">
+              <h3>Gift 1</h3>
+              <p>A special song for you 🎵</p>
+            </div>
+            
+            <div class="gift-box" id="giftBox2">
+              <img src="giftbox.png" alt="Gift 2" class="gift-icon">
+              <h3>Gift 2</h3>
+              <p>Beautiful flowers & messages 🌸</p>
+            </div>
+            
+            <div class="gift-box" id="giftBox3">
+              <img src="giftbox.png" alt="Gift 3" class="gift-icon">
+              <h3>Gift 3</h3>
+              <p>A letter from my heart 💌</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Gift 1 Page - Music Player -->
+    <div id="gift1-container" class="page-container">
+      <button class="back-btn" id="backFromGift1">← Back</button>
+      <div class="content-wrapper">
+        <div class="gift-content gift1-layout">
+          <div class="gif-section-left">
+            <img src="hehe.gif" alt="Love" class="side-gif">
+          </div>
+          
+          <div class="music-section">
+            <img src="music-card.png" alt="Music Player" class="music-card">
+          </div>
+          
+          <div class="gif-section-right">
+            <img src="hehe2.gif" alt="Hearts" class="side-gif">
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Gift 2 Page - Flowers -->
+    <div id="gift2-container" class="page-container">
+      <button class="back-btn" id="backFromGift2">← Back</button>
+      <div class="content-wrapper">
+        <div class="gift-content-centered">
+          <img src="gift2bg.png" alt="Flowers and Messages" class="gift2-image">
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+
+    <!-- Gift 3 Page - Letter -->
+    <div id="gift3-container" class="page-container">
+      <button class="back-btn" id="backFromGift3">← Back</button>
+      <div class="content-wrapper">
+        <div class="gift-content-centered">
+          <img src="gift3.png" alt="Love Letter" class="letter-image">
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Fron Manas 💖</p>
+      </footer>
+    </div>
+    
+    <!-- Audio for gifts -->
+    <audio id="music3" loop>
+      <source src="perfect.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="music4" loop>
+      <source src="music3.mp3" type="audio/mpeg" />
+    </audio>
+    
+    <script src="script.js"></script>
+  </body>
+</html> 

@@ -1,0 +1,936 @@
+/* ============= MOBILE-FIRST DESIGN ============= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("heart-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Pixelify Sans", sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ============= PAGE CONTAINER (ALL PAGES) ============= */
+.page-container {
+    display: none;
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    padding-bottom: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ============= SIGNUP PAGE ============= */
+#signup-container {
+    display: flex;
+}
+
+.signup-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 25px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 380px;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-card h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    line-height: 1.3;
+}
+
+#name-input {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: 3px solid #ffb6c1;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Pixelify Sans", sans-serif;
+    outline: none;
+    margin-bottom: 12px;
+    background: white;
+}
+
+#name-input:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+#error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    min-height: 20px;
+    font-weight: bold;
+}
+
+#signup-btn {
+    width: 100%;
+    padding: 14px 25px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+    transition: transform 0.2s;
+}
+
+#signup-btn:active {
+    transform: scale(0.95);
+}
+
+/* ============= ENVELOPE PAGE ============= */
+.envelope-wrapper {
+    text-align: center;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+#envelope {
+    width: 180px;
+    height: auto;
+    animation: pulse 1.8s infinite ease-in-out;
+    cursor: pointer;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+.envelope-text {
+    font-size: 32px;
+    margin: 0;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* ============= LETTER CONTENT (PROPOSAL PAGES) ============= */
+.letter-content {
+    width: 100%;
+    max-width: 420px;
+    background-image: url("window.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 20px 40px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: scaleIn 0.6s ease;
+    min-height: 520px;
+    justify-content: space-evenly;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.proposal-title {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 15px;
+    text-align: center;
+    color: #000;
+    word-wrap: break-word;
+}
+
+.name-highlight {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* ============= CAT IMAGES ============= */
+.cat-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cat-image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.cat-dance {
+    width: 160px;
+}
+
+/* ============= BUTTONS ============= */
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.btn {
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.yes-btn:active,
+.no-btn-static:active {
+    transform: scale(0.95);
+}
+
+/* Static No Button (Pages 1 & 2) */
+.no-btn-static {
+    cursor: pointer;
+}
+
+/* Moving No Button (Page 3) */
+.no-wrapper {
+    position: relative;
+    width: 110px;
+    height: auto;
+}
+
+.no-btn {
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+/* ============= SUCCESS PAGE ============= */
+.success-content {
+    gap: 15px;
+}
+
+.success-title {
+    font-size: 36px;
+    margin: 0;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.final-text {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 15px 20px;
+    background: rgba(255, 240, 240, 0.95);
+    border-radius: 15px;
+    margin: 5px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 182, 193, 0.5);
+}
+
+.final-text strong {
+    color: #ff1493;
+}
+
+.replay-btn {
+    margin-top: 10px;
+    padding: 12px 30px;
+    font-size: 17px;
+    background: white;
+    color: #ff1493;
+    border: 3px solid #ff1493;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    transition: all 0.2s ease;
+}
+
+.replay-btn:active {
+    transform: scale(0.95);
+    background: #ff1493;
+    color: white;
+}
+
+.continue-btn {
+    margin-top: 15px;
+    padding: 14px 40px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+    transition: all 0.3s ease;
+}
+
+.continue-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 20, 147, 0.5);
+}
+
+.continue-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ============= FOOTER ============= */
+.footer {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.footer p {
+    font-size: 15px;
+    margin: 0;
+    color: #ff1493;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 10px 22px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 105, 180, 0.4);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* ============= RESPONSIVE ADJUSTMENTS ============= */
+
+/* Small phones (< 375px) */
+@media (max-width: 374px) {
+    .signup-card {
+        padding: 28px 20px;
+    }
+    
+    .signup-card h1 {
+        font-size: 24px;
+    }
+    
+    #name-input {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+    
+    #signup-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    #envelope {
+        width: 150px;
+    }
+    
+    .envelope-text {
+        font-size: 28px;
+    }
+    
+    .letter-content {
+        padding: 50px 15px 35px 15px;
+        min-height: 480px;
+    }
+    
+    .proposal-title {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    
+    .cat-image {
+        width: 170px;
+    }
+    
+    .cat-dance {
+        width: 140px;
+    }
+    
+    .btn {
+        width: 95px;
+    }
+    
+    .buttons-wrapper {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .final-text {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    .success-title {
+        font-size: 32px;
+    }
+    
+    .footer p {
+        font-size: 13px;
+        padding: 8px 18px;
+    }
+}
+
+/* Regular phones (375px - 430px) */
+@media (min-width: 375px) and (max-width: 430px) {
+    .letter-content {
+        min-height: 500px;
+    }
+}
+
+/* Larger phones (> 430px) */
+@media (min-width: 431px) {
+    .signup-card {
+        max-width: 420px;
+        padding: 40px 30px;
+    }
+    
+    .signup-card h1 {
+        font-size: 30px;
+    }
+    
+    #envelope {
+        width: 200px;
+    }
+    
+    .envelope-text {
+        font-size: 36px;
+    }
+    
+    .letter-content {
+        max-width: 450px;
+        padding: 70px 25px 45px 25px;
+        min-height: 560px;
+    }
+    
+    .proposal-title {
+        font-size: 24px;
+    }
+    
+    .cat-image {
+        width: 220px;
+    }
+    
+    .cat-dance {
+        width: 180px;
+    }
+    
+    .btn {
+        width: 120px;
+    }
+    
+    .buttons-wrapper {
+        gap: 30px;
+    }
+    
+    .final-text {
+        font-size: 19px;
+    }
+    
+    .success-title {
+        font-size: 38px;
+    }
+}
+
+/* Landscape mode */
+@media (max-height: 600px) and (orientation: landscape) {
+    .page-container {
+        padding: 10px;
+        padding-bottom: 60px;
+    }
+    
+    .letter-content {
+        min-height: auto;
+        padding: 40px 20px 30px 20px;
+        gap: 12px;
+    }
+    
+    .proposal-title {
+        font-size: 18px;
+    }
+    
+    .cat-image {
+        width: 140px;
+    }
+    
+    .cat-dance {
+        width: 120px;
+    }
+    
+    .btn {
+        width: 90px;
+    }
+    
+    .buttons-wrapper {
+        gap: 18px;
+    }
+    
+    .footer {
+        bottom: 8px;
+    }
+    
+    .footer p {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+}
+
+/* Very small landscape screens */
+@media (max-height: 500px) and (orientation: landscape) {
+    .letter-content {
+        padding: 30px 15px 25px 15px;
+        gap: 8px;
+    }
+    
+    .proposal-title {
+        font-size: 16px;
+    }
+    
+    .cat-image {
+        width: 120px;
+    }
+    
+    .cat-dance {
+        width: 100px;
+    }
+    
+    .final-text {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+}
+
+/* Prevent zoom on double tap (iOS) */
+button, input, .btn {
+    touch-action: manipulation;
+}
+
+/* ============= GIFTS SECTION (SUCCESS PAGE) ============= */
+.sub-text-gifts {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.click-me-btn {
+    padding: 18px 50px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.click-me-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.6);
+}
+
+.click-me-btn:active {
+    transform: translateY(-1px);
+}
+
+.gifts-container {
+    display: none;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.gift-box {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #ff69b4;
+    border-radius: 20px;
+    padding: 20px;
+    width: 140px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.gift-box:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.4);
+    border-color: #ff1493;
+}
+
+.gift-box:active {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.gift-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.gift-box h3 {
+    color: #ff69b4;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.gift-box p {
+    color: #666;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ============= GIFT PAGES ============= */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 105, 180, 0.95);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.back-btn:hover {
+    background: rgba(255, 20, 147, 0.95);
+    transform: translateX(3px);
+}
+
+.back-btn:active {
+    transform: translateX(1px);
+}
+
+/* Gift 1 - Music Player */
+.gift-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+}
+
+.gift1-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+}
+
+.gif-section-left,
+.gif-section-right {
+    flex: 0 0 auto;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+.side-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.side-gif:hover {
+    transform: scale(1.05);
+}
+
+.music-section {
+    flex: 0 0 auto;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+.music-card {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+    transform: scale(1.02);
+}
+
+.gif-section {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.ilyp-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.ilyp-gif:hover {
+    transform: scale(1.05);
+}
+
+/* Gift 2 & 3 - Centered Images */
+.gift-content-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.gift2-image {
+    max-width: 100%;
+    width: 900px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.gift2-image:hover {
+    transform: scale(1.02);
+}
+
+.letter-image {
+    max-width: 100%;
+    width: 650px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.letter-image:hover {
+    transform: scale(1.02);
+}
+
+/* ============= RESPONSIVE - GIFTS ============= */
+@media (max-width: 430px) {
+    .click-me-btn {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+
+    .gifts-container {
+        gap: 15px;
+    }
+
+    .gift-box {
+        width: 120px;
+        padding: 15px;
+    }
+
+    .gift-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .gift-box h3 {
+        font-size: 16px;
+    }
+
+    .gift-box p {
+        font-size: 12px;
+    }
+
+    .back-btn {
+        top: 15px;
+        right: 15px;
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    .gift-content {
+        flex-direction: column;
+        gap: 25px;
+        padding: 15px;
+    }
+
+    .gift1-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gif-section-left,
+    .gif-section-right {
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .music-section,
+    .gif-section {
+        max-width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 374px) {
+    .click-me-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .gift-box {
+        width: 100px;
+        padding: 12px;
+    }
+
+    .gift-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gift-box h3 {
+        font-size: 14px;
+    }
+
+    .gift-box p {
+        font-size: 11px;
+    }
+}
+
+/* Landscape mode for gifts */
+@media (max-height: 600px) and (orientation: landscape) {
+    .gifts-container {
+        gap: 12px;
+    }
+
+    .gift-box {
+        width: 110px;
+        padding: 12px;
+    }
+
+    .gift-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .click-me-btn {
+        padding: 12px 35px;
+        font-size: 16px;
+    }
+
+    .back-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .gift-content {
+        gap: 20px;
+    }
+
+    .gift1-layout {
+        gap: 15px;
+    }
+
+    .side-gif {
+        max-width: 150px;
+    }
+
+    .music-card {
+        max-width: 300px;
+    }
+}
+
+/* Tablet and smaller laptops */
+@media (max-width: 900px) {
+    .gift1-layout {
+        flex-wrap: wrap;
+    }
+
+    .gif-section-left {
+        order: 1;
+        max-width: 200px;
+    }
+
+    .music-section {
+        order: 2;
+        max-width: 100%;
+    }
+
+    .gif-section-right {
+        order: 3;
+        max-width: 200px;
+    }
+}
